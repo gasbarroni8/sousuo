@@ -1,2 +1,7 @@
 # -
 根据慕课上scrapy打造搜索引擎完成的项目
+数据用scrapy抓取存入elasticsearch中  
+elasticsearch坑非常多版本必须都一致否则容易出现bug,存elasticsearch先运行爬虫项目的models文件里面写好了逻辑分词库自己单独下载放到es中  
+如果想增量爬取用scrapy-redis做定时任务还可以去重  
+后台为django按照网上教程配置就可以热门搜索用了redis有序集合点击次数当做分值数据内容自行扩展  
+可以放到nginx服务器上配置uwsgi
